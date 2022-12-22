@@ -21,6 +21,9 @@ public class Main {
         System.out.print("Welcome! Enter the type of car you're looking for: ");
         String make = scan.nextLine();
 
+        // ignore case
+        make = make.substring(0,1).toUpperCase() + make.substring(1).toLowerCase();
+
         System.out.print("\nEnter your budget: ");
         int budget = scan.nextInt();
 
@@ -52,8 +55,6 @@ public class Main {
         } else {
             dealership.sell(search); // sell the car
         }
-
-        // Task 6 – Ignore letter cases.
 
         scan.close();
 
